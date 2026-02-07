@@ -74,11 +74,11 @@ All data are from **NHANES 2017–March 2020 Pre-Pandemic** (CDC NCHS). Files ar
 
 | File       | Description                     | Key Variables                          |
 |-----------|----------------------------------|----------------------------------------|
-| `P_BMX.xpt`  | Body measures                   | SEQN, BMXBMI, BMXHT, BMXWT             |
-| `P_DPQ.xpt`  | Mental health (depression)      | SEQN, DPQ010–DPQ100                    |
-| `P_ALQ.xpt`  | Alcohol use                     | SEQN, ALQ121, etc.                     |
-| `P_SLQ.xpt`  | Sleep disorders                 | SEQN, SLD012 (weekday sleep duration)  |
-| `P_TCHOL.xpt`| Total cholesterol               | SEQN, LBDTCSI (mmol/L)                 |
+| `Dataset/P_BMX.xpt`  | Body measures                   | SEQN, BMXBMI, BMXHT, BMXWT             |
+| `Dataset/P_DPQ.xpt`  | Mental health (depression)      | SEQN, DPQ010–DPQ100                    |
+| `Dataset/P_ALQ.xpt`  | Alcohol use                     | SEQN, ALQ121, etc.                     |
+| `Dataset/P_SLQ.xpt`  | Sleep disorders                 | SEQN, SLD012 (weekday sleep duration)  |
+| `Dataset/P_TCHOL.xpt`| Total cholesterol               | SEQN, LBDTCSI (mmol/L)                 |
 
 - **Source**: [CDC NHANES](https://wwwn.cdc.gov/nchs/nhanes/)  
 - **Citation**: National Center for Health Statistics. National Health and Nutrition Examination Survey. Hyattsville, MD: CDC.
@@ -92,11 +92,12 @@ All data are from **NHANES 2017–March 2020 Pre-Pandemic** (CDC NCHS). Files ar
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
 ├── Health Analytics and Classification using NHANES 2017–2020 Data.ipynb   # Main notebook
-├── P_BMX.xpt                    # Body measures
-├── P_DPQ.xpt                    # Mental health
-├── P_ALQ.xpt                    # Alcohol use
-├── P_SLQ.xpt                    # Sleep
-├── P_TCHOL.xpt                  # Total cholesterol
+├── Dataset/                     # NHANES data (SAS XPT)
+│   ├── P_BMX.xpt                # Body measures
+│   ├── P_DPQ.xpt                # Mental health
+│   ├── P_ALQ.xpt                # Alcohol use
+│   ├── P_SLQ.xpt                # Sleep
+│   └── P_TCHOL.xpt              # Total cholesterol
 ├── 2c541dd0-9292-49a5-a3a2-52b360274f71.pdf
 ├── 4bc75bc9-e4d2-4db3-98db-7d29ed0c5044.pdf
 └── roc_curves_holoviews.html    # Generated: interactive ROC plot (after running notebook)
@@ -146,7 +147,7 @@ All data are from **NHANES 2017–March 2020 Pre-Pandemic** (CDC NCHS). Files ar
    pip install -r requirements.txt
    ```
 
-4. Ensure the five `.xpt` files and the notebook are in the same directory (or adjust paths in the notebook).
+4. Ensure the `Dataset/` folder contains the five `.xpt` files and is in the same directory as the notebook (paths in the notebook use `Dataset/`).
 
 ---
 
